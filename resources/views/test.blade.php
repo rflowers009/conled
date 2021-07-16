@@ -6,4 +6,6 @@
     </x-slot>
 
    
+   Test
 </x-app-layout>
+
