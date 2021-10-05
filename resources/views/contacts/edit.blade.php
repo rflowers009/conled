@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Product</h2>
+                <h2>Edit Contact</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="/contacts" title="Go back"> <i class="fas fa-backward "></i> </a>

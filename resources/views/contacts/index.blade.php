@@ -20,7 +20,7 @@
             <p></p>
         </div>
     @endif
-
+ 
     <table class="table table-bordered table-responsive-lg">
         <tr>
             <th>Name</th>
@@ -29,10 +29,12 @@
             <th>Phone</th>
             <th>City</th>
             <th>State</th>
+            <th>&nbsp;</th>
         </tr>
         @foreach ($contacts as $contact)
             <tr>
                 <td>{{ $contact['first_name'] }} {{$contact['last_name']}}</td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -59,6 +61,6 @@
             </tr>
         @endforeach
     </table>
-
+ 
     {!! $contacts->links() !!}
 @endsection
