@@ -6,6 +6,7 @@
         </h2>
         <ul>
             <li><a href="/contacts">Contacts</a></li>
+            <li><a href="/posts">Posts</a></li>
         </ul>
     </x-slot>
 

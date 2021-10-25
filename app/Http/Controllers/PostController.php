@@ -14,7 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->paginate(5);
+        $userId = auth()->user()->id;
+        $posts = Post::latest()->where('user_id',  $userId )->paginate(5);
 
         return view('posts.index', compact('posts'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -38,13 +39,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $userId = $request->user()->id;
+        
+          
+        
         $request->validate(
             [   
                 'title' => 'required',
-                'post_content' => 'requried'
+                'post_content' => 'required'
             ]
         );
-
+        $request->request->add(['user_id' => $userId]);
+          print_r($request->all()) ;
         Post::create($request->all());
 
         return redirect()->route('posts.index')->with('success', 'Post created successfully');
@@ -81,12 +87,14 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        /*
         $request->validate(
             [   
                 'title' => 'required',
-                'post_content' => 'requried'
+                'post_content' => 'required'
             ]
         );
+        */
 
         $post->update($request->all());
 
