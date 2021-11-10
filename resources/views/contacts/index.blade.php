@@ -10,7 +10,8 @@
                 <h2>Contacts</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="/contacts/create" title="Create a contact"> <i class="fas fa-plus-circle"></i>
+                <a class="btn btn-success" href="/contacts/create" title="Create a contact"> 
+                    <i class="fas fa-plus-circle"></i>
                     </a>
             </div>
         </div>
